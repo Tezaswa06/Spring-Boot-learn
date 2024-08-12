@@ -1,0 +1,62 @@
+import java.util.*;
+
+// class Movie{// class creation
+//     int duration;
+//     String name;
+//     double ratings;
+//     String genre;
+// }
+class Movie{// right now if we want to access duration or ratings or name then we can't access it
+    private int duration;// because of private keyword which we have added as we can't access it from outside
+    private String name;// so if we want to access this we have to get it within the class or we can use getters and setters
+    private double ratings;// getters and setters must be public such that we can fetch and update data from outside easily
+    private String genre;
+    
+    public void setDuration(int newDuration){
+        duration = newDuration
+    }
+    public void setName(String newName){
+        name = newName;
+    }
+    public void setRating(double newRating){
+        rating = newRating;
+    }
+    public void setGenre(String genre){
+        genre = newGenre;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        int[] durations = {120,150,140,200,100};
+        
+        String[] name = {"Avengers Loki",
+                         "Avengers Ultron","Avengers Infinity War",
+                         "Avengers EndGame","Thor Love and Thunder"
+                         };
+        double[] ratings = {4.0, 3.0, 4.9, 5.0, 2.0};
+        String[] genre = {"Action" , "Comedy", "Thriller" , "Scifi", "Romance"};
+        
+        System.out.println(name[4] + " " +
+                          durations[4] + " " +
+                          genre[4] + " " + 
+                         ratings[4]);
+        
+        // Movie avengers1 = new Movie();// obeject creation
+        // avengers1.duration = 120;// data members get and set
+        // avengers1.name = "Avengers LOKI";
+        // avengers1.ratings = 4.0;
+        // avengers1.genre = "Action";
+        
+        Movie avengers1 = new Movie();
+        
+        avengers1.setDuration(120);// now the below is private data but we can setit from outside so the biggest question is 
+        avengers1.setName("loki");// how are we protecting it so what we can do is we can validate or perform check here 
+        avenger.setRating(5.0);// before setting the data that the person who is performing these task is authenicate user
+        avengers.setName("Action");// or not and we can here also define user authenticity
+        
+        System.out.println(avengers1.name + " " + // output
+                          avengers1.duration + " " +
+                          avengers1.genre + " " +
+                          avengers1.ratings + " ");
+    }
+}     
